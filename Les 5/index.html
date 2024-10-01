@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+
+    function berekenLeeftijdInJaren(geboorteJaar, geboorteMaand, geboorteDag) {
+        let now = new Date();
+        let birth = new Date(geboorteJaar, geboorteMaand - 1, geboorteDag);
+        let miliseconds = now - birth;
+        let verschilInDagen = miliseconds / (1000 * 60 * 60 * 24);
+        let leeftijdInJaren = verschilInDagen / 365.25;
+            return leeftijdInJaren.toFixed(2);
+}
+
+    const geboorteJaar = prompt("Welk jaar ben je geboren? Voorbeeld 2000)");
+    const geboorteMaand = prompt("Welke maand ben je geboren? (Voorbeeld 2)");
+    const geboorteDag = prompt("Welke dag ben je geboren? (Voorbeeld 20)");
+    const leeftijd = berekenLeeftijdInJaren(geboorteJaar, geboorteMaand, geboorteDag);
+        console.log(`Je bent ${leeftijd} jaar oud`);
+
+    </script>
+</body>
+</html>
