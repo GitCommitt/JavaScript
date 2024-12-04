@@ -1,0 +1,94 @@
+@media print and (min-width: 200px)and (max-width: 3500px) {
+    .head-bar {
+        background:none !important;
+        color: #000 !important;
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        position: absolute !important;
+        left: 0
+    }
+
+    .nav-toggle {
+        padding-left: 0 !important;
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important
+    }
+
+    .aside-toggle {
+        padding-right: 0 !important;
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important
+    }
+
+    .col-noprint {
+        display: none
+    }
+
+    #scheduler .k-scheduler-content {
+        height: auto !important
+    }
+
+    #scheduler table {
+        width: 100% !important
+    }
+
+    .wizzard>.sheet {
+        border: none !important
+    }
+
+    .wizzard .sheet .block h3 {
+        border: none !important;
+        color: #000 !important
+    }
+
+    .wizzard-block .sheet .block .content {
+        border: none !important;
+        max-height: auto !important
+    }
+
+    dna-breadcrumbs {
+        display: none
+    }
+
+    .head-bar {
+        display: none
+    }
+
+    .tabs-strip {
+        display: none
+    }
+
+    .wizzard>.sheet {
+        border: none
+    }
+
+    .primary-button,.col-noprint {
+        display: none
+    }
+
+    .wizzard-block .sheet .block h3 {
+        border: none;
+        box-shadow: none
+    }
+
+    .wizzard .resume {
+        border: none
+    }
+
+    .block h3 {
+        color: #000
+    }
+
+    div.head-bar h1 {
+        display: none
+    }
+}

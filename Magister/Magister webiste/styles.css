@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 64px 240px auto;
+    height: 100vh;
+}
+
+.sidebar{
+    background-color: #0683ea;
+}
+
+.navbar{
+    background-color: #1f97f9;
+}
+.navbar__list{
+    list-style: none;
+}
+.main{
+    background-color: white;
+}
+
+.magister-logo{
+    width:  auto;
+    margin: 6px;
+}
+
+li{
+    margin: 12px;
+}
+
+button{
+    background-color: rgb(6, 131, 234);
+    width: 216px;
+    height: 40px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    border-color: transparent;
+    color: white;
+    font-family: "open-sans, sans-serif";
+}

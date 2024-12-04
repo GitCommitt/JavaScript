@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaart</title>
+    <style>
+        body {
+            text-align: center;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+        }
+
+        canvas {
+            border: 10px solid rgb(255, 255, 255);
+            margin-top: 20px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kaart | Daan Pronk</h1>
+    <canvas id="canvasId" width="600" height="600"></canvas>
+    <script>
+
+        const canvas = document.getElementById("canvasId");
+        const g = canvas.getContext("2d");
+
+        function drawBoom() {
+            g.beginPath();
+
+            //Kleur Takken
+            g.fillStyle = "green";
+
+            //Eerste Driehoek
+            g.moveTo(300, 10);
+            g.lineTo(250, 150);
+            g.lineTo(350, 150);
+            g.closePath();
+            g.fill();
+
+            //Tweede Driehoek
+            g.beginPath();
+            g.moveTo(300, 10);
+            g.lineTo(230, 250);
+            g.lineTo(370, 250);
+            g.closePath();
+            g.fill();
+
+            // Derde Driehoek
+            g.beginPath();
+            g.moveTo(300, 10);
+            g.lineTo(210, 350);
+            g.lineTo(390, 350);
+            g.closePath();
+            g.fill();
+
+            //Vierde Driehoek
+            g.beginPath();
+            g.moveTo(300, 10);
+            g.lineTo(190, 450);
+            g.lineTo(410, 450);
+            g.closePath();
+            g.fill();
+
+            //Boomstam
+            g.fillStyle = "brown";
+            g.fillRect(260, 450, 75, 75);
+        }
+
+        function drawKertsballen() {
+            g.fillStyle = "gold";
+
+            //Kerstballen
+            g.beginPath();
+            g.arc(300, 50, 10, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "blue";
+            g.beginPath();
+            g.arc(310, 120, 15, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "red";
+            g.beginPath();
+            g.arc(280, 210, 10, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "orange";
+            g.beginPath();
+            g.arc(340, 250, 10, 0, Math.PI * 2);
+            g.fill();
+            
+            g.fillStyle = "gold";
+            g.beginPath();
+            g.arc(270, 290, 12.5, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "lightblue";
+            g.beginPath();
+            g.arc(300, 350, 10, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "white";
+            g.beginPath();
+            g.arc(330, 390, 15, 0, Math.PI * 2);
+            g.fill();
+
+            g.fillStyle = "pink";
+            g.beginPath();
+            g.arc(250, 410, 15, 0, Math.PI * 2);
+            g.fill();
+        }
+
+        function drawText() {
+            const colors = ["red", "green", "blue"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            g.fillStyle = randomColor;
+            g.font = "30px Monospace";
+            g.fillText("Merry Christmas", 175, 575);
+        }
+
+        drawBoom();
+        drawKertsballen();
+        drawText();
+    </script>
+</body>
+
+</html>
